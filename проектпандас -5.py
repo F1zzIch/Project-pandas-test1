@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def clean_salary(row):
+def cl_s(row):
     
     if pd.isna(row['salary']):
         res = 0
@@ -18,9 +18,5 @@ data = {
 
 df = pd.DataFrame(data)
 
-# ПОДСКАЗКА: 
-# 1. Проверить на NaN можно через pd.isna(значение)
-# 2. Убрать символ из строки: str(значение).replace('$', '')
-# 3. Не забудь привести результат к int()
-df = df.apply(clean_salary,axis=1)
+df = df.apply(cl_s,axis=1)
 print(df)
