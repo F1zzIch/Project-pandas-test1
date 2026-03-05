@@ -17,6 +17,7 @@ data = {
     'fact': [1200, 1800, 500, 2900]
 }
 
+
 df = pd.DataFrame(data)
 df = df.apply(prem,axis=1)
 print(df)
